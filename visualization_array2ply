@@ -1,0 +1,12 @@
+import open3d as o3d
+import numpy as np
+
+ind = 0
+for xyz, label in trgt_trainset:
+    print(xyz.shape)
+    pcd = o3d.geometry.PointCloud()
+    pcd.points = o3d.utility.Vector3dVector(xyz)
+    o3d.io.write_point_cloud("vis_scannet/"+str(ind)+'.ply', pcd)
+    ind = ind + 1
+
+print('finish vis')
