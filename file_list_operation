@@ -13,7 +13,7 @@ def _list_image_files_recursively(data_dir):
     
 # select N items (files) from a list
 
-original_list = _list_image_files_recursively(args.data_dir)
+original_list = _list_image_files_recursively(data_dir)
 N = 5000
 selected_list = random.choices(original_list, k=N)
 print(len(selected_list))
